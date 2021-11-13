@@ -1,0 +1,57 @@
+@import "utilities";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    letter-spacing: 2px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  input,
+  textarea {
+    border: none;
+  }
+
+  section {
+    margin: 2rem 0;
+  }
+
+  .section__name {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  section,.about__box {
+    border: 1px solid black;
+  }
+
+  .btn {
+    @include d_flex-jc_center;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+  }
+  
+  .btn:hover, .menu-item__link:hover {
+    @include hover-style;
+    color: $main-color;
+    transition: 0.4s;
+    
+  }
+
+  .arrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+  }

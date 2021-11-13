@@ -1,0 +1,23 @@
+
+.name-logo {
+    color: gold;
+}
+
+.name-logo, .menu-item {
+    padding:  0 2rem;
+}
+
+.nav-header {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.menu-item {
+    font-size: 1.375rem;
+}

@@ -1,0 +1,76 @@
+@import "general_Styles";
+@import "variables";
+@import "header";
+@import "about";
+@import "utilities";
+
+.page-wrapper {
+    font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: $auxiliar-color;
+}
+
+.header,.menu-link, .footer {
+    color: whitesmoke;
+}
+
+.header, .about__box-bg, .footer {
+    background-color: $main-color;
+}
+
+.header, .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+}
+
+.name-logo, .menu-item {
+    display: inline-block;
+}
+
+.name-logo, .section__name {
+    font-size: 1.875rem;
+}
+
+@media (min-width: 768px) and (min-height: 601px) {
+
+    section {
+        margin: 2rem;
+    }
+    .nav-header {
+        display: block;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .about-section {
+        height: 100vh;
+    }
+
+    .section__box {
+        height: 70vh;
+    }
+
+    .about__box {
+        padding: 1rem 2rem;
+    }
+
+    .about__box-wrapper {
+        flex-direction: row;
+        
+
+    }
+
+   
+}
+
+@media (min-width: 1200px) {
+    .main {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}

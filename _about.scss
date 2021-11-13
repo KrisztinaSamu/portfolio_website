@@ -1,0 +1,35 @@
+@import "utilities";
+.about {
+  &-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  &__box-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__box {
+    width: 100%;
+    @include d_flex-jc_center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img-box {
+    max-width: 50vw;
+  }
+
+  &-photo {
+    max-width: 100%;
+    height: 20rem;
+  }
+
+  &-text {
+    padding: 0.5rem 0;
+  }
+}

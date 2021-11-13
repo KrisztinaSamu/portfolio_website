@@ -1,0 +1,10 @@
+@import "variables";
+
+@mixin d_flex-jc_center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin hover-style {
+  background-color: $secondary-color;
+}
