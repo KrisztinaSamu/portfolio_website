@@ -6,12 +6,15 @@
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
+    background-color: $main-color;
   }
 
   &__box-wrapper {
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &__box {
     width: 100%;
@@ -20,16 +23,50 @@
     align-items: center;
   }
 
-  &__img-box {
-    max-width: 50vw;
-  }
-
   &-photo {
-    max-width: 100%;
     height: 20rem;
+    border: 5px solid white;
+  }
+}
+
+.greeting-text,
+.profession-text {
+  padding: 0.5rem 0;
+}
+
+.greeting-text {
+  font-size: 1.8rem;
+}
+
+.profession-text {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) and (min-height: 601px) {
+  .about-section {
+    min-height: 100vh;
+    margin: 0;
   }
 
-  &-text {
-    padding: 0.5rem 0;
+  .navbar,
+  .about__box,
+  .project__description-wrapper {
+    padding: 1rem 2rem 0;
+  }
+
+  .about__box-wrapper {
+    flex-direction: row;
+  }
+
+  .project__button-container {
+    flex-direction: row;
+  }
+
+  .greeting-text {
+    font-size: 2.3rem;
+  }
+
+  .profession-text {
+    font-size: 1.5rem;
   }
 }

@@ -3,74 +3,92 @@
 @import "header";
 @import "about";
 @import "utilities";
+@import "portfolio";
+@import "skills";
+@import "contact";
+@import "design-section";
+@import "scrollUp";
+@import "footer";
+
+body {
+  font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
+}
 
 .page-wrapper {
-    font-family: "Raleway", sans-serif, Arial, Helvetica, sans-serif;
-    max-width: 1600px;
-    margin: 0 auto;
-    background-color: $auxiliar-color;
+  max-width: 1600px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: $auxiliar-color;
+  font-size: 1.1rem;
 }
 
-.header,.menu-link, .footer {
-    color: whitesmoke;
+.header,
+.about__box-bg,
+.footer {
+  background-color: $main-color;
 }
 
-.header, .about__box-bg, .footer {
-    background-color: $main-color;
+.header,
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 5rem;
 }
 
-.header, .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
+.header,
+.menu-link,
+.btn,
+.footer {
+  color: $auxiliar-color;
 }
 
-.name-logo, .menu-item {
-    display: inline-block;
+.about-text,
+.project__description,
+.footer {
+  padding: 0.5rem 0;
 }
 
-.name-logo, .section__name {
-    font-size: 1.875rem;
+.menu-item {
+  display: inline-block;
+}
+
+.menu-link {
+  color: white;
+}
+
+.project__button,
+.form__submit {
+  background-color: $main-color;
 }
 
 @media (min-width: 768px) and (min-height: 601px) {
+  .page-wrapper {
+    font-size: 1.3rem;
+  }
 
-    section {
-        margin: 2rem;
-    }
-    .nav-header {
-        display: block;
-    }
+  .header,
+  .footer {
+    justify-content: space-around;
+  }
 
-    .hamburger-menu {
-        display: none;
-    }
+  section {
+    margin: 2rem;
+  }
 
-    .about-section {
-        height: 100vh;
-    }
-
-    .section__box {
-        height: 70vh;
-    }
-
-    .about__box {
-        padding: 1rem 2rem;
-    }
-
-    .about__box-wrapper {
-        flex-direction: row;
-        
-
-    }
-
-   
+  .section__box {
+    max-width: 80rem;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
-@media (min-width: 1200px) {
-    .main {
-        max-width: 80%;
-        margin: 0 auto;
-    }
+@media (min-width: 1000px) {
+  .main,
+  .section__box-wrapper,
+  .navbar {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }

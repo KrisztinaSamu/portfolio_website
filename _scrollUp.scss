@@ -1,0 +1,32 @@
+.scroll-up {
+  clip-path: polygon(100% 35%, 100% 100%, 50% 73%, 0% 100%, 0 35%, 50% 0);
+  width: 40px;
+  height: 60px;
+  background: /*transparent*/ $main-color;
+  position: fixed;
+  bottom: 100px;
+  right: 1%;
+  z-index: 100;
+  cursor: pointer;
+
+  &,
+  &::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &::before {
+    content: "up";
+    width: 35px;
+    height: 50px;
+    background-color: white;
+    color: $main-color;
+    clip-path: polygon(100% 35%, 100% 100%, 50% 70%, 0% 100%, 0 35%, 50% 0);
+  }
+
+  &__text {
+    text-shadow: 1px 1px 2px black;
+    font-size: 16px;
+  }
+}

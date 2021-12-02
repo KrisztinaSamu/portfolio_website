@@ -1,0 +1,213 @@
+/***** General style *****/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1rem;
+}
+
+:root {
+  --font-color: #000000;
+  --heighlighter-color: #dcd7d7;
+}
+
+body {
+  background-color: var(--heighlighter-color);
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 90%;
+  margin: 2rem auto;
+  box-shadow: -9px 7px 7px 0px rgba(50, 50, 50, 0.5);
+}
+
+.contact,
+.skills,
+.language,
+.name-xs,
+.name-md,
+.profile,
+.education,
+.work-experience {
+  margin: 2rem 2.2rem;
+}
+
+.h1-style,
+.list-name,
+.name,
+.qualification,
+.h2-style {
+  letter-spacing: 0.1rem;
+}
+
+.profile,
+.education-item,
+.work-experience__item {
+  padding-bottom: 1rem;
+}
+
+.education .list-item:first-child,
+.work-experience .list-item:first-child {
+  padding: 0.6rem 0;
+  font-weight: bold;
+}
+
+/***** Aside style *****/
+
+.profile-p {
+  font-size: 1.2rem;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture {
+  width: 25vw;
+  margin-top: 1rem;
+  border-radius: 50%;
+}
+
+.name-xs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.qualification {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+.profile {
+  background-color: var(--heighlighter-color);
+  padding: 1rem;
+}
+
+.contact-icon {
+  padding-right: 1rem;
+}
+
+.list-item,
+.skills__item {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.list-name {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.skills__item {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+/***** Main style *****/
+
+.name-md {
+  display: none;
+}
+
+.h1-style {
+  display: inline-block;
+  width: 1.7rem;
+  height: 5.7rem;
+  background-color: var(--heighlighter-color);
+}
+
+.h2-style {
+  background-image: linear-gradient(
+    var(--heighlighter-color) 55%,
+    transparent 40%
+  );
+}
+
+.portfolio-h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.portfolio-item {
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.work-experience__item .protfolio-item:first-child {
+  text-decoration: underline;
+}
+
+/***** Footer style *****/
+
+.copyright {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/***** Media query *****/
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  p {
+    font-size: 1.2rem;
+  }
+
+  .img-wrapper,
+  .profile,
+  .name-md,
+  .skills,
+  .language,
+  .education,
+  .work-experience {
+    margin: 2.4rem 2.2rem;
+  }
+
+  .name {
+    font-size: 2.6rem;
+  }
+
+  .name-xs {
+    display: none;
+  }
+
+  .name-md {
+    display: block;
+  }
+
+  .sidebar {
+    width: 40%;
+  }
+
+  .content {
+    width: 60%;
+  }
+
+  .profile-picture {
+    width: 50%;
+  }
+}

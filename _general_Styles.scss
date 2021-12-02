@@ -1,57 +1,101 @@
 @import "utilities";
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    user-select: none;
-    letter-spacing: 2px;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  input,
-  textarea {
-    border: none;
-  }
-
-  section {
-    margin: 2rem 0;
-  }
-
-  .section__name {
-    text-align: center;
-    margin: 1rem 0;
-  }
-
-  section,.about__box {
+/*section,.about__box {
     border: 1px solid black;
   }
-
-  .btn {
-    @include d_flex-jc_center;
-    color: black;
-    text-align: center;
-    text-transform: uppercase;
-    padding: 1rem;
-  }
-  
-  .btn:hover, .menu-item__link:hover {
-    @include hover-style;
-    color: $main-color;
-    transition: 0.4s;
-    
+  .project__box-wrapper {
+    border: 1px solid red;
   }
 
-  .arrow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 10px;
+  .project__box {
+    border: 3px solid green;
+  }*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  letter-spacing: 0.5px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  border: none;
+}
+
+section {
+  margin: 0;
+}
+
+.box {
+  margin: 2rem auto 0;
+}
+
+.section__box {
+  padding: 0.5rem 1rem;
+}
+
+.section__name {
+  font-size: 1.875rem;
+  text-align: center;
+  padding: 1rem 0;
+  color: $secondary-color;
+}
+
+.section__h2 {
+  border-top: 3px solid $secondary-color;
+  display: inline-block;
+  padding-top: 1rem;
+}
+
+.btn {
+  @include d_flex-jc_center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin: 1rem;
+  border: 2px solid $auxiliar-color;
+  /*box-shadow: 0px 0px 0px 0px #c8ecec,
+              0px 0px 0px 0px #c8ecec,
+              0px 0px 0px 0px #0001,
+              0px 0px 0px 0px #0001,
+               -4px -8px 20px 0px #c8ecec,
+               -6px -6px 20px 0px #c8ecec,
+               4px 8px 20px 0px #0003,
+               6px 6px 5px 0px #0001;*/
+}
+
+.btn:hover,
+.menu-item__link:hover,
+.btn-resume:hover,
+.project-button:hover {
+  @include hover-style;
+  transition: 0.4s;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.highlight {
+  color: $complementary-color;
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+  .section__box {
+    padding: 0;
   }
+}

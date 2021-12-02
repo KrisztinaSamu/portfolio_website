@@ -1,23 +1,118 @@
+.header {
+  position: relative;
+  width: 100%;
+}
 
 .name-logo {
-    color: gold;
+  //display: flex;
+  //align-items: center;
+  /*background-color: rgba(245, 247, 250, 0.5);*/
+  color: /*$main-color*/ rgba(245, 247, 250, 0.5);
+  font-size: 1.8rem;
+  height: 100%;
+  padding-right: 1rem;
+  /*text-shadow: 2px 2px 3px rgba(255,255,255,0.5),
+                -2px -2px 3px rgba(00,00,00,0.5);*/
+  -webkit-text-stroke: 1.5px /*rgb(194, 64, 194)*/ $secondary-color;
+  color: transparent;
+  font-weight: 500;
 }
 
-.name-logo, .menu-item {
-    padding:  0 2rem;
-}
-
-.nav-header {
-    display: none;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  width: 100%;
 }
 
 .nav-menu {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.menu-link {
+  transition: 0.7s ease;
+  &:hover {
+    color: hotpink;
+  }
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 1.6rem;
+  padding: 0 3rem;
+
+  .bar {
+    width: 1.6rem;
+    height: 2px;
+    border: 1px solid #fff;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    &:nth-child(2) {
+      width: 1.3rem;
+      background: #fff;
+    }
+  }
+}
+
+.hamburger-menu:hover {
+  cursor: pointer;
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-menu.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-menu.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  gap: 0;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: 0.8s ease;
+}
+
+.nav-menu.active {
+  top: 0;
+  background-color: hotpink;
+}
+
+@media (min-width: 768px) and (min-height: 601px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .name-logo {
+    font-size: 2.8rem;
+  }
+
+  .nav-menu {
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    gap: 60px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-}
+  }
 
-.menu-item {
+  .menu-item {
     font-size: 1.375rem;
+  }
 }

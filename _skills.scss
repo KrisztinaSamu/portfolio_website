@@ -1,0 +1,47 @@
+.skills__box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills__item {
+  width: 50%;
+  height: 142px;
+  margin-bottom: 10px;
+}
+
+.skills__img {
+  width: 5rem;
+  margin: 1rem;
+  border-radius: 3.125rem;
+}
+
+.devicon,
+.fab {
+  color: $main-color;
+  font-size: 3.5rem;
+}
+
+.icon-name {
+  line-height: 1.55;
+  //font-size: 1rem;
+}
+
+.container-img-i {
+  width: 70px;
+  display: block;
+  height: 3.5rem;
+  margin: 0 auto;
+}
+.icon-img {
+  width: 100%;
+  background-color: $main-color;
+}
+
+@media (min-width: 768px) and (min-height: 601px) {
+  .skills__item {
+    width: 25%;
+  }
+}

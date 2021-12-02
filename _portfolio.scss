@@ -1,0 +1,81 @@
+.project__box {
+  border: 2px solid $main-color;
+}
+
+.project__box-wrapper,
+.project__button-container {
+  display: flex;
+}
+
+.project__box-wrapper {
+  flex-direction: column;
+}
+
+.project__button-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project__box {
+  min-height: 25rem;
+  margin: 1rem 0;
+}
+
+.project__box-wrapper:nth-child(1) {
+  margin: 0 0 1rem 0;
+}
+
+.project__picture-wrapper {
+  //max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.project__picture {
+  max-width: 50%;
+}
+
+.project__header {
+  font-size: 1.75rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.project__content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 768px) and (min-height: 601px) {
+  .project__picture {
+    height: 25rem;
+  }
+
+  .project__header {
+    font-size: 2rem;
+    padding: 2rem 0;
+  }
+
+  .project__picture-wrapper {
+    grid-area: picture;
+  }
+
+  .project__description-wrapper {
+    grid-area: description;
+  }
+
+  .project__button-container {
+    grid-area: button;
+  }
+
+  .project__content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "picture description"
+      "button button";
+  }
+}
