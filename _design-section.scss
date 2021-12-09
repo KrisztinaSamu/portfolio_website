@@ -15,9 +15,13 @@
 }
 
 .design-section:after,
-.design-section-1,
+.design-section-1 {
+  height: 120px;
+}
+
 .design-section-2 {
   height: 120px;
+  bottom: -2px;
 }
 
 .design-section-1,
@@ -32,7 +36,20 @@
 
 .design-section-1:after,
 .design-section-2:after {
-  clip-path: polygon(100% 100%, 100% 0, 0 0);
+  clip-path: polygon(100% 100%, 100% 0, -150% 0);
   top: -1px;
   left: 0;
+}
+
+@media (min-width: 768px) and (min-height: 601px) {
+  /*.design-section-2 {
+    height: 120px;
+  }*/
+
+  .design-section-1:after,
+  .design-section-2:after {
+    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    /*top: -1px;
+    left: 0;*/
+  }
 }

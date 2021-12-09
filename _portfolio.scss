@@ -18,8 +18,9 @@
 }
 
 .project__box {
-  min-height: 25rem;
-  margin: 1rem 0;
+  max-width: 50rem;
+  min-height: 20rem;
+  margin: 1rem auto;
 }
 
 .project__box-wrapper:nth-child(1) {
@@ -30,10 +31,12 @@
   //max-width: 50%;
   display: flex;
   justify-content: center;
+  padding: 0.5rem 0;
+
 }
 
 .project__picture {
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .project__header {
@@ -50,7 +53,7 @@
 
 @media (min-width: 768px) and (min-height: 601px) {
   .project__picture {
-    height: 25rem;
+    height: 20rem;
   }
 
   .project__header {
@@ -60,6 +63,7 @@
 
   .project__picture-wrapper {
     grid-area: picture;
+    padding: 0;
   }
 
   .project__description-wrapper {
