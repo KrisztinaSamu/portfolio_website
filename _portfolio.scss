@@ -76,10 +76,11 @@
 
   .project__content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     grid-template-areas:
       "picture description"
       "button button";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    
   }
 }

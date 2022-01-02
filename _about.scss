@@ -30,8 +30,10 @@
 }
 
 .greeting-text,
-.profession-text {
+.profession-text,
+.about-text {
   padding: 0.5rem 0;
+  color: $text-color;
 }
 
 .greeting-text {

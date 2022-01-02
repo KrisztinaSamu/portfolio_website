@@ -138,14 +138,10 @@ section {
 }
 
 .name-logo {
-  /*background-color: rgba(245, 247, 250, 0.5);*/
-  color: rgba(245, 247, 250, 0.5);
   font-size: 1.8rem;
   height: 100%;
   padding-right: 1rem;
-  /*text-shadow: 2px 2px 3px rgba(255,255,255,0.5),
-                -2px -2px 3px rgba(00,00,00,0.5);*/
-  -webkit-text-stroke: 1.5px #248f74;
+  -webkit-text-stroke: 1.5px #043b54;
   color: transparent;
   font-weight: 500;
 }
@@ -177,10 +173,35 @@ section {
 .menu-link {
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
+  position: relative;
 }
 
 .menu-link:hover {
-  color: hotpink;
+  color: #973997;
+}
+
+.menu-link:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%) scaleX(0);
+  -webkit-transform: translateX(-50%) scaleX(0);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #973997;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  -webkit-transition: transform 250ms;
+}
+
+.menu-link:hover:after {
+  -webkit-transform: translateX(-50%) scaleX(1);
+          transform: translateX(-50%) scaleX(1);
 }
 
 .hamburger-menu {
@@ -252,15 +273,12 @@ section {
 
 .nav-menu.active {
   top: 0;
-  background-color: hotpink;
+  background-color: #33cca6;
 }
 
 @media (min-width: 768px) and (min-height: 601px) {
   .hamburger-menu {
     display: none;
-  }
-  .name-logo {
-    font-size: 2.8rem;
   }
   .nav-menu {
     height: auto;
@@ -342,8 +360,10 @@ section {
 }
 
 .greeting-text,
-.profession-text {
+.profession-text,
+.about-text {
   padding: 0.5rem 0;
+  color: #043b54;
 }
 
 .greeting-text {
@@ -480,11 +500,11 @@ section {
   .project__content-wrapper {
     display: -ms-grid;
     display: grid;
+        grid-template-areas: "picture description" "button button";
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "picture description" "button button";
   }
 }
 
